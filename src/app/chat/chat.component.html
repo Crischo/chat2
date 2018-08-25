@@ -1,0 +1,12 @@
+
+<div style="margin:  0 0 0 10px;">
+  <pre *ngFor="let mensaje of mensajes | async" >
+      {{mensaje.nombre}} Dice:
+    <div class="card" style="width: 70%;">
+      <h6 class="card-subtitle mb-2 text-muted"><br>{{mensaje.mensaje}}</h6>
+    </div>
+  </pre>
+</div>
+  
+
+  
