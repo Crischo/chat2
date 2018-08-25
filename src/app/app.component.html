@@ -1,6 +1,6 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--Barra de navegacion-->
+<!-- color azul navbar-light bg-primary-->
+<nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">Carreras</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,16 +8,33 @@
 
     <div class="collapse navbar-collapse" id="navbarText">
       <div class="row" *ngFor ="let post of posts">
-          <li class="nav-item">
-              <a class="nav-link" href="#">{{post.nombre}}</a>
-            </li>
-        
-   
-</div>
+        <div class="col-sm-8">
+          <a class="nav-link "  style="font-size:70%;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{post.nombre}}
+          </a>
+        </div>
+        <div class="col-sm-4"> </div>
+       </div>
+      
+<!--
 
-      <span class="navbar-text">
-       
-      </span>
+   
+       <div class="row" *ngFor ="let post of posts">
+          <li class="nav-item">
+              <li class="nav-item dropdown list-group">
+                            <a class="nav-link dropdown-toggle list-group-item"  style="font-size:70%;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              {{post.nombre}}
+                            </a>
+                            <div class="dropdown-menu row" aria-labelledby="navbarDropdownMenuLink" *ngFor ="let post of posts">
+                              <a class="dropdown-item" href="#">{{post.nombre}}</a>
+                             
+                            </div>
+                          </li>
+      
+        </div>
+
+-->
+    
     </div>
   </nav>
 
